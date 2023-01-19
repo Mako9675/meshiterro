@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit ,:update]
   
-  devise_for :users
+  devise_for :users ,path: 'user'
   root to: 'homes#top'
   
   resources :post_images, only: [:new, :create, :index, :show, :destroy]
